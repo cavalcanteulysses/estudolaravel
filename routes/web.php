@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('compras','ComprasController@index');
+Route::get('compras/create','ComprasController@create');
