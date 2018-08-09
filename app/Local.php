@@ -10,4 +10,8 @@ class Local extends Model
         'nome',
         'sigla'
     ];
+
+    public function compras(){
+        return $this->hasMany('App\Compras');
+    }
 }

@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('produtos','ProdutosController');
+Route::get('compras','ComprasController@index');
