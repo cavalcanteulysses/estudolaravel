@@ -17,6 +17,10 @@ class ComprasController extends Controller
     }
 
     public function create(){
-        return view('compras.create');
+        $local = Local::all('sigla');
+        $statusProcesso = StatusProcesso::all('nome');
+        $tipoDocumento = TipoDocumento::all('nome');
+        $tipoProcesso = TipoProcesso::all();
+        return view('compras.create',['local'=>$local,'statusProcesso'=>$statusProcesso,'tipoDocumento'=>$tipoDocumento,'tipoProcesso'=>$tipoProcesso]);
     }
 }
