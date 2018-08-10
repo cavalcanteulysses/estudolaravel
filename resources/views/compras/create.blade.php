@@ -5,7 +5,7 @@
     <div class="container">
         <h1>Nova Compra</h1>
 
-        {!! Form::open() !!}
+        {!! Form::open(['url'=>'compras/store']) !!}
 
             <div class="form-group">
                 {!! Form::label('numero', 'Numero do Documento:') !!}

@@ -17,18 +17,18 @@
                 <th>tipo_processo_id</th>
                 <th>status_processo_id</th>
             </tr>
+            @foreach($compras as $compra)
             <tr>
-                @foreach($compras as $compras)
-                <td>{{$compras->id}}</td>
-                <td>{{$compras->numero}}</td>
-                <td>{{$compras->data_protocolo}}</td>
-                <td>{{$compras->objeto}}</td>
-                <td>{{$compras->tipoDocumento->nome}}</td>
-                <td>{{$compras->localOrigem->sigla}}</td>
-                <td>{{$compras->tipoProcesso->nome}}</td>
-                <td>{{$compras->statusProcesso->nome}}</td>
-                @endforeach
-            </tr>
+                <td>{{$compra->id}}</td>
+                <td>{{$compra->numero}}</td>
+                <td>{{$compra->data_protocolo}}</td>
+                <td>{{$compra->objeto}}</td>
+                <td>{{$compra->tipoDocumento->nome}}</td>
+                <td>{{$compra->localOrigem->sigla}}</td>
+                <td>{{$compra->tipoProcesso->nome}}</td>
+                <td>{{$compra->statusProcesso->nome}}</td>
+            </tr>                
+            @endforeach
         </table>
 
 

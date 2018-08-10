@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
 use App\Compra;
 use App\Local;
 use App\StatusProcesso;
@@ -17,10 +18,16 @@ class ComprasController extends Controller
     }
 
     public function create(){
-        $local = Local::all('sigla');
-        $statusProcesso = StatusProcesso::all('nome');
-        $tipoDocumento = TipoDocumento::all('nome');
-        $tipoProcesso = TipoProcesso::all();
+        $local = Local::all()->sortBy('sigla', SORT_NATURAL | SORT_FLAG_CASE)->pluck('sigla', 'id');
+        $statusProcesso = StatusProcesso::all()->sortBy('nome', SORT_NATURAL | SORT_FLAG_CASE)->pluck('nome', 'id');;
+        $tipoDocumento = TipoDocumento::all()->sortBy('nome', SORT_NATURAL | SORT_FLAG_CASE)->pluck('nome', 'id');;
+        $tipoProcesso = TipoProcesso::all()->sortBy('nome', SORT_NATURAL | SORT_FLAG_CASE)->pluck('nome', 'id');;
         return view('compras.create',['local'=>$local,'statusProcesso'=>$statusProcesso,'tipoDocumento'=>$tipoDocumento,'tipoProcesso'=>$tipoProcesso]);
+    }
+
+    public function store(Request $request){
+        $input = $request->all();
+        Compra::create($input);
+        return redirect('compras');
     }
 }
