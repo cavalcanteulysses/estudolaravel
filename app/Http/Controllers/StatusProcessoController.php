@@ -23,4 +23,9 @@ class StatusProcessoController extends Controller
         StatusProcesso::create($input);
         return redirect('compras/todos-status');
     }
+
+    public function destroy($id){
+        StatusProcesso::find($id)->delete();
+        return redirect('compras/todos-status');
+    }
 }

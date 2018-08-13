@@ -31,4 +31,9 @@ class ComprasController extends Controller
         Compra::create($input);
         return redirect('compras');
     }
+
+    public function destroy($id){
+        Compra::find($id)->delete();
+        return redirect('compras');
+    }
 }

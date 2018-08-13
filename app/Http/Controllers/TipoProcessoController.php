@@ -21,6 +21,11 @@ class TipoProcessoController extends Controller
     public function store(TipoProcessoRequest $request){
         $input = $request->all();
         TipoProcesso::create($input);
-        return redirect('compras/todos-tipos-processo');
+        return redirect('compras/todos-tipos-processos');
+    }
+
+    public function destroy($id){
+        TipoProcesso::find($id)->delete();
+        return redirect('compras/todos-tipos-processos');
     }
 }

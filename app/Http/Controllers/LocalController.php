@@ -23,4 +23,10 @@ class LocalController extends Controller
         Local::create($input);
         return redirect('compras/todos-locais');
     }
+
+    public function destroy($id){
+        Local::find($id)->delete();
+        return redirect('compras/todos-locais');
+    }
+
 }

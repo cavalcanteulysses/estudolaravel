@@ -23,4 +23,9 @@ class TipoDocumentoController extends Controller
         TipoDocumento::create($input);
         return redirect('compras/todos-tipos-documentos');
     }
+
+    public function destroy($id){
+        TipoDocumento::find($id)->delete();
+        return redirect('compras/todos-tipos-documentos');
+    }
 }
