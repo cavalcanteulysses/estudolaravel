@@ -19,6 +19,8 @@ Route::get('compras','ComprasController@index');
 Route::get('compras/create','ComprasController@create');
 Route::post('compras/store','ComprasController@store');
 Route::get('compras/{id}/destroy','ComprasController@destroy');
+Route::get('compras/{id}/edit','ComprasController@edit');
+Route::put('compras/{id}/update','ComprasController@update');
 
 Route::get('compras/todos-locais','LocalController@index');
 Route::get('compras/todos-locais/create','LocalController@create');

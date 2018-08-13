@@ -36,4 +36,14 @@ class ComprasController extends Controller
         Compra::find($id)->delete();
         return redirect('compras');
     }
+
+    public function edit($id){
+        $compra = Compra::find($id);
+        return view('compras.edit',compact('compra'));
+    }
+
+    public function update(CompraRequest $request, $id){
+        $compra = Compra::find($id)->update($request->all());
+        return redirect('compras');
+    }
 }
