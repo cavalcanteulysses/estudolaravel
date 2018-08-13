@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StatusProcessoRequest;
 use App\Http\Requests;
 use App\StatusProcesso;
 
@@ -17,7 +18,7 @@ class StatusProcessoController extends Controller
         return view('dados.create');
     }
 
-    public function store(Request $request){
+    public function store(StatusProcessoRequest $request){
         $input = $request->all();
         StatusProcesso::create($input);
         return redirect('compras/todos-status');

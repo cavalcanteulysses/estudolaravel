@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\TipoProcessoRequest;
 use App\Http\Requests;
 use App\TipoProcesso;
 
@@ -17,7 +18,7 @@ class TipoProcessoController extends Controller
         return view('dados.create');
     }
 
-    public function store(Request $request){
+    public function store(TipoProcessoRequest $request){
         $input = $request->all();
         TipoProcesso::create($input);
         return redirect('compras/todos-tipos-processo');

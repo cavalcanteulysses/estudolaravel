@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Http\Requests\CompraRequest;
 use App\Compra;
 use App\Local;
 use App\StatusProcesso;
@@ -25,7 +26,7 @@ class ComprasController extends Controller
         return view('compras.create',['local'=>$local,'statusProcesso'=>$statusProcesso,'tipoDocumento'=>$tipoDocumento,'tipoProcesso'=>$tipoProcesso]);
     }
 
-    public function store(Request $request){
+    public function store(CompraRequest $request){
         $input = $request->all();
         Compra::create($input);
         return redirect('compras');

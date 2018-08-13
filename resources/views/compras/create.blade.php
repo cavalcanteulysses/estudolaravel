@@ -5,6 +5,14 @@
     <div class="container">
         <h1>Nova Compra</h1>
 
+        @if ($errors->any())
+        <ul class="alert alert-warning">
+            @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+        @endif
+
         {!! Form::open(['url'=>'compras/store']) !!}
 
             <div class="form-group">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\LocalRequest;
 use App\Http\Requests;
 use App\Local;
 
@@ -17,7 +18,7 @@ class LocalController extends Controller
         return view('dados.create');
     }
 
-    public function store(Request $request){
+    public function store(LocalRequest $request){
         $input = $request->all();
         Local::create($input);
         return redirect('compras/todos-locais');

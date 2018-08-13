@@ -3,10 +3,17 @@
 @section('content')
 
     <div class="container">
-        <h1>Novo dado específico</h1>
+        <h1>Adicionar Novo Dado</h1>
+
+        @if ($errors->any())
+        <ul class="alert alert-warning">
+            @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+        @endif
 
         {!! Form::open(['url'=>'compras/'.Request::segment(2).'/store/']) !!}
-
 
             <div class="form-group">
                 {!! Form::label('nome', 'Nome:') !!}
@@ -28,6 +35,5 @@
         {!! Form::close() !!}
 
     </div>
-
 
 @endsection()

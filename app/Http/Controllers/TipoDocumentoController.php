@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\TipoDocumentoRequest;
 use App\Http\Requests;
 use App\TipoDocumento;
 
@@ -17,7 +18,7 @@ class TipoDocumentoController extends Controller
         return view('dados.create');
     }
 
-    public function store(Request $request){
+    public function store(TipoDocumentoRequest $request){
         $input = $request->all();
         TipoDocumento::create($input);
         return redirect('compras/todos-tipos-documentos');
