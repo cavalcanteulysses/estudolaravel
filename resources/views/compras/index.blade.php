@@ -1,37 +1,41 @@
 @extends('app')
 
 @section('content')
-
-    <div class="container">
-    
-        <h1>Compras</h1>
-
-        <table border="solid 1px">
-            <tr>
-                <th>id</th>
-                <th>numero</th>
-                <th>data_protocolo</th>
-                <th>objeto</th>
-                <th>tipo_documento_id</th>
-                <th>local_origem_id</th>
-                <th>tipo_processo_id</th>
-                <th>status_processo_id</th>
-            </tr>
-            @foreach($compras as $compra)
-            <tr>
-                <td>{{$compra->id}}</td>
-                <td>{{$compra->numero}}</td>
-                <td>{{$compra->data_protocolo}}</td>
-                <td>{{$compra->objeto}}</td>
-                <td>{{$compra->tipoDocumento->nome}}</td>
-                <td>{{$compra->localOrigem->sigla}}</td>
-                <td>{{$compra->tipoProcesso->nome}}</td>
-                <td>{{$compra->statusProcesso->nome}}</td>
-            </tr>                
-            @endforeach
-        </table>
-
-
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Processos de Compras</h1>
     </div>
+    <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>Data de Protocolo na ADM</th>
+                  <th>Documento</th>
+                  <th>Origem</th>
+                  <th>Objeto</th>
+                  <th>Status</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                @foreach($compras as $compra)
+                <tr>
+                    <td>{{$compra->data_protocolo}}</td>
+                    <td>{{$compra->tipoDocumento->nome}} nº {{$compra->numero}}</td>
+                    <td>{{$compra->localOrigem->sigla}}</td>
+                    <td>{{$compra->objeto}}</td>
+                    <td>{{$compra->statusProcesso->nome}}</td>
+                    <td>
+                        <button class="btn-sm btn-success">
+                            <i class="far fa-edit"></i>
+                        </button>
+                        <button class="btn-sm btn-danger">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+                @endforeach
+              </tbody>
+            </table>
+          </div>
 
 @endsection

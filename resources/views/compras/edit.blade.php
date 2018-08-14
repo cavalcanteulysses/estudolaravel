@@ -25,29 +25,25 @@
                 {!! Form::date('data_protocolo', $compra->data_protocolo, ['class'=>'form-control']) !!}
             </div>
 
-            <!-- CORRIGIR DAQUI -->
-
             <div class="form-group">
-                    {!! Form::label('tipo_documento_id', 'Tipo de Documento:') !!}
-                    {!! Form::select('tipo_documento_id',$compra->tipo_documento_id, null, ['placeholder' => 'Selecione...','class'=>'form-control']) !!}
-                </div>
-    
-                <div class="form-group">
-                    {!! Form::label('local_origem_id', 'Local de Origem:') !!}
-                    {!! Form::select('local_origem_id',$compra->local_origem_id, null, ['placeholder' => 'Selecione...','class'=>'form-control']) !!}
-                </div>
-    
-                <div class="form-group">
-                    {!! Form::label('tipo_processo_id', 'Tipo de Processo:') !!}
-                    {!! Form::select('tipo_processo_id',$compra->tipo_processo_id, null, ['placeholder' => 'Selecione...','class'=>'form-control']) !!}
-                </div>
-                
-                <div class="form-group">
-                    {!! Form::label('status_processo_id', 'Status/Andamento do Processo:') !!}
-                    {!! Form::select('status_processo_id',$compra->status_processo_id, null, ['placeholder' => 'Selecione...','class'=>'form-control']) !!}
+                {!! Form::label('tipo_documento_id', 'Tipo de Documento:') !!}
+                {!! Form::select('tipo_documento_id',$tipoDocumento, $compra->tipo_documento_id) !!}
             </div>
-
-            <!-- ATÉ AQUI -->
+    
+            <div class="form-group">
+                {!! Form::label('local_origem_id', 'Local de Origem:') !!}
+                {!! Form::select('local_origem_id',$local, $compra->local_origem_id) !!}
+            </div>
+    
+            <div class="form-group">
+                {!! Form::label('tipo_processo_id', 'Tipo de Processo:') !!}
+                {!! Form::select('tipo_processo_id',$tipoProcesso, $compra->tipo_processo_id) !!}
+            </div>
+            
+            <div class="form-group">
+                {!! Form::label('status_processo_id', 'Status/Andamento do Processo:') !!}
+                {!! Form::select('status_processo_id',$statusProcesso, $compra->status_processo_id) !!}
+            </div>
 
             <div class="form-group">
                 {!! Form::label('objeto', 'Objeto:') !!}

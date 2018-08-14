@@ -39,7 +39,11 @@ class ComprasController extends Controller
 
     public function edit($id){
         $compra = Compra::find($id);
-        return view('compras.edit',compact('compra'));
+        $local = Local::all()->sortBy('sigla', SORT_NATURAL | SORT_FLAG_CASE)->pluck('sigla', 'id');
+        $statusProcesso = StatusProcesso::all()->sortBy('nome', SORT_NATURAL | SORT_FLAG_CASE)->pluck('nome', 'id');;
+        $tipoDocumento = TipoDocumento::all()->sortBy('nome', SORT_NATURAL | SORT_FLAG_CASE)->pluck('nome', 'id');;
+        $tipoProcesso = TipoProcesso::all()->sortBy('nome', SORT_NATURAL | SORT_FLAG_CASE)->pluck('nome', 'id');;
+        return view('compras.edit',compact('compra'),['local'=>$local,'statusProcesso'=>$statusProcesso,'tipoDocumento'=>$tipoDocumento,'tipoProcesso'=>$tipoProcesso]);
     }
 
     public function update(CompraRequest $request, $id){

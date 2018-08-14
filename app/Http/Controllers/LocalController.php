@@ -21,12 +21,12 @@ class LocalController extends Controller
     public function store(LocalRequest $request){
         $input = $request->all();
         Local::create($input);
-        return redirect('compras/todos-locais');
+        return redirect('dados/todos-locais');
     }
 
     public function destroy($id){
         Local::find($id)->delete();
-        return redirect('compras/todos-locais');
+        return redirect('dados/todos-locais');
     }
 
 }

@@ -21,11 +21,11 @@ class StatusProcessoController extends Controller
     public function store(StatusProcessoRequest $request){
         $input = $request->all();
         StatusProcesso::create($input);
-        return redirect('compras/todos-status');
+        return redirect('dados/todos-status');
     }
 
     public function destroy($id){
         StatusProcesso::find($id)->delete();
-        return redirect('compras/todos-status');
+        return redirect('dados/todos-status');
     }
 }

@@ -21,11 +21,11 @@ class TipoDocumentoController extends Controller
     public function store(TipoDocumentoRequest $request){
         $input = $request->all();
         TipoDocumento::create($input);
-        return redirect('compras/todos-tipos-documentos');
+        return redirect('dados/todos-tipos-documentos');
     }
 
     public function destroy($id){
         TipoDocumento::find($id)->delete();
-        return redirect('compras/todos-tipos-documentos');
+        return redirect('dados/todos-tipos-documentos');
     }
 }
