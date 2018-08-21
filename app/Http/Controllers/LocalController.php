@@ -11,7 +11,7 @@ class LocalController extends Controller
 {
     public function index(){
         $locals = Local::all();
-        return view('dados.index',['dados'=>$locals]);
+        return view('dados.list',['dados'=>$locals]);
     }
 
     public function create(){

@@ -2,32 +2,12 @@
 
 @section('content')
 
-    <div class="container">
-        
-        <h1>Gerenciar Dados</h1>
-
-        <table border="solid 1px">
-            <tr>
-                <th>id</th>
-                <th>nome</th>
-                @if (Request::segment(2) == "todos-locais")
-                <th>sigla</th>
-                @else
-                @endif
-            </tr>
-            @foreach($dados as $dado)
-            <tr>
-                <td>{{$dado->id}}</td>
-                <td>{{$dado->nome}}</td>
-                @if (Request::segment(2) == "todos-locais")
-                <td>{{$dado->sigla}}</td>
-                @else
-                @endif
-            </tr>                
-            @endforeach
-        </table>
-
-
+    <div class="col-md-10">
+        <h1>Todos os Dados Cadastrados</h1>
+        <hr>
+        <a class="btn btn-primary btn-lg" href="/dados/todos-locais">Gerenciar Locais</a>
+        <a class="btn btn-primary btn-lg" href="/dados/todos-status">Gerenciar Status dos Processos</a>
+        <a class="btn btn-primary btn-lg" href="/dados/todos-tipos-documentos">Gerenciar Tipos dos Documentos</a>
+        <a class="btn btn-primary btn-lg" href="/dados/todos-tipos-processos">Gerenciar Tipos dos Processos</a>
     </div>
-
 @endsection

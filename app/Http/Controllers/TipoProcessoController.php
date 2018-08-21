@@ -11,7 +11,7 @@ class TipoProcessoController extends Controller
 {
     public function index(){
         $tipos = TipoProcesso::all();
-        return view('dados.index',['dados'=>$tipos]);
+        return view('dados.list',['dados'=>$tipos]);
     }
 
     public function create(){

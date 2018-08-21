@@ -11,7 +11,7 @@ class TipoDocumentoController extends Controller
 {
     public function index(){
         $tipos = TipoDocumento::all();
-        return view('dados.index',['dados'=>$tipos]);
+        return view('dados.list',['dados'=>$tipos]);
     }
 
     public function create(){

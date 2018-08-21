@@ -11,7 +11,7 @@ class StatusProcessoController extends Controller
 {
     public function index(){
         $status = StatusProcesso::all();
-        return view('dados.index',['dados'=>$status]);
+        return view('dados.list',['dados'=>$status]);
     }
 
     public function create(){

@@ -1,19 +1,24 @@
 @extends('app')
 
 @section('content')
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Processos de Compras</h1>
-    </div>
-    <div class="table-responsive">
-            <table class="table table-striped table-sm">
+    <div class="col-md-10">
+        <div class="row justify-content-between">
+            <div class="col-md-4">
+                <h1>Processos de Compras</h1>
+            </div>
+            <div class="col-md-2">
+                <a class="btn btn-primary" href="/compras/create" title="Criar Novo">Cadastrar Novo Processo</a>
+            </div>
+        </div>
+        <table class="table">
               <thead>
                 <tr>
-                  <th>Data de Protocolo na ADM</th>
-                  <th>Documento</th>
-                  <th>Origem</th>
-                  <th>Objeto</th>
-                  <th>Status</th>
-                  <th>Ações</th>
+                  <th scope="col">Data de Protocolo na ADM</th>
+                  <th scope="col">Documento</th>
+                  <th scope="col">Origem</th>
+                  <th scope="col">Objeto</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Ações</th>
                 </tr>
               </thead>
               <tbody>
@@ -25,17 +30,13 @@
                     <td>{{$compra->objeto}}</td>
                     <td>{{$compra->statusProcesso->nome}}</td>
                     <td>
-                        <button class="btn-sm btn-success">
-                            <i class="far fa-edit"></i>
-                        </button>
-                        <button class="btn-sm btn-danger">
-                            <i class="far fa-trash-alt"></i>
-                        </button>
+                        <a class="btn-sm btn-success" href="#" title="Editar"><i class="far fa-edit"></i></a>
+                        <a class="btn-sm btn-danger" href="compras/{{$compra->id}}/destroy" title="Excluir"><i class="far fa-trash-alt"></i></a>
+                        <a class="btn-sm btn-info" href="#" title="Visualizar"><i class="fas fa-external-link-alt"></i></a>
                     </td>
                 </tr>
                 @endforeach
               </tbody>
-            </table>
-          </div>
-
+        </table>
+    </div>
 @endsection

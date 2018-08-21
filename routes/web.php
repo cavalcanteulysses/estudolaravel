@@ -22,6 +22,10 @@ Route::get('compras/{id}/destroy','ComprasController@destroy');
 Route::get('compras/{id}/edit','ComprasController@edit');
 Route::put('compras/{id}/update','ComprasController@update');
 
+Route::get('dados/',function () {
+    return view('dados.index');
+});
+
 Route::get('dados/todos-locais','LocalController@index');
 Route::get('dados/todos-locais/create','LocalController@create');
 Route::post('dados/todos-locais/store','LocalController@store');
