@@ -29,4 +29,14 @@ class LocalController extends Controller
         return redirect('dados/todos-locais');
     }
 
+    public function edit($id){
+        $dado = Local::find($id);
+        return view('dados.edit',compact('dado'));
+    }
+
+    public function update(LocalRequest $request, $id){
+        $local = Local::find($id)->update($request->all());
+        return redirect('dados/todos-locais');
+    }
+
 }

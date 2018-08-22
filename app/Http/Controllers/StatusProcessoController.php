@@ -28,4 +28,14 @@ class StatusProcessoController extends Controller
         StatusProcesso::find($id)->delete();
         return redirect('dados/todos-status');
     }
+
+    public function edit($id){
+        $dado = StatusProcesso::find($id);
+        return view('dados.edit',compact('dado'));
+    }
+
+    public function update(StatusProcessoRequest $request, $id){
+        $status = StatusProcesso::find($id)->update($request->all());
+        return redirect('dados/todos-status');
+    }
 }

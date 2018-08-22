@@ -31,7 +31,7 @@
 
     <header>
       <nav class="navbar navbar-expand fixed-top navbar-dark bg-dark justify-content-between">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
               eCompras 
           </a> 
           <ul class="navbar-nav">
@@ -50,7 +50,7 @@
           <div class="col-md-3">
               <ul class="list-group">
                   <li class="list-group-item"><a href="/compras">Processos de Compras</a></li>    
-                  <li class="list-group-item"><a href="#">Processos Licitatórios</a></li>    
+                  <li class="list-group-item"><a href="/licitacoes">Processos Licitatórios</a></li>    
                   <li class="list-group-item"><a href="/dados">Gerenciar Dados</a></li>    
                   <li class="list-group-item"><a href="#">Relatórios</a></li>    
                   <li class="list-group-item"><a href="#">Busca Personalizada</a></li>    

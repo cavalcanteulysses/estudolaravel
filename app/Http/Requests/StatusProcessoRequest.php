@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use App\Http\Requests;
 use App\StatusProcesso;
-use App\Http\Requests\ProdutoRequest;
+
 
 class StatusProcessoRequest extends FormRequest
 {

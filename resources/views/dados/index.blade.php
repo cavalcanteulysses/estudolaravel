@@ -18,7 +18,10 @@
                         </li>
                         <li class="list-group-item">
                         <a class="btn btn-primary btn-block" href="/dados/todos-tipos-processos">Gerenciar Tipos dos Processos</a>
-                        </li>   
+                        </li>  
+                        <li class="list-group-item">
+                        <a class="btn btn-primary btn-block" href="/dados/todas-modalidades">Gerenciar Modalidades de Licitação</a>
+                        </li> 
                 </ul> 
         </div>
     

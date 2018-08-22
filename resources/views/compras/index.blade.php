@@ -30,7 +30,7 @@
                     <td>{{str_limit($compra->objeto, $limit = 30, $end = '...')}}</td>
                     <td>{{$compra->statusProcesso->nome}}</td>
                     <td>
-                        <a class="btn-sm btn-success" href="#" title="Editar"><i class="far fa-edit"></i></a>
+                        <a class="btn-sm btn-success" href="compras/{{$compra->id}}/edit" title="Editar"><i class="far fa-edit"></i></a>
                         <a class="btn-sm btn-danger" href="compras/{{$compra->id}}/destroy" title="Excluir"><i class="far fa-trash-alt"></i></a>
                         <a class="btn-sm btn-info" href="#" title="Visualizar"><i class="fas fa-external-link-alt"></i></a>
                     </td>

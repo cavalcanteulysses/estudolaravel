@@ -10,7 +10,7 @@ class StatusProcesso extends Model
         'nome'
     ];
 
-    public function compras(){
-        return $this->hasMany('App\Compras');
+    public function Compra(){
+        return $this->hasMany('App\Compra');
     }
 }

@@ -7,8 +7,8 @@
             <div class="col-md-4">
                 <h2>Gerenciar Dados</h2>
             </div>
-            <div class="col-md-3">
-                <a class="btn btn-primary" href="/dados/{{Request::segment(2)}}/create" title="Criar Novo">Cadastrar Novo Processo</a>
+            <div class="col-md-2">
+                <a class="btn btn-primary" href="/dados/{{Request::segment(2)}}/create" title="Criar Novo">Cadastrar Novo</a>
             </div>
         </div>
         <table class="table">
@@ -30,9 +30,8 @@
                 @else
                 @endif
                 <td>
-                    <a class="btn-sm btn-success" href="#" title="Editar"><i class="far fa-edit"></i></a>
-                    <a class="btn-sm btn-danger" href="#" title="Excluir"><i class="far fa-trash-alt"></i></a>
-                    <a class="btn-sm btn-info" href="#" title="Visualizar"><i class="fas fa-external-link-alt"></i></a>
+                    <a class="btn-sm btn-success" href="/dados/{{Request::segment(2)}}/{{$dado->id}}/edit" title="Editar"><i class="far fa-edit"></i></a>
+                    <a class="btn-sm btn-danger" href="/dados/{{Request::segment(2)}}/{{$dado->id}}/destroy" title="Excluir"><i class="far fa-trash-alt"></i></a>
                 </td>
             </tr>                
             @endforeach

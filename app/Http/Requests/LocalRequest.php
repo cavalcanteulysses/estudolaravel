@@ -5,7 +5,6 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use App\Http\Requests;
 use App\Local;
-use App\Http\Requests\ProdutoRequest;
 
 class LocalRequest extends FormRequest
 {

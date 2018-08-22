@@ -28,4 +28,14 @@ class TipoDocumentoController extends Controller
         TipoDocumento::find($id)->delete();
         return redirect('dados/todos-tipos-documentos');
     }
+
+    public function edit($id){
+        $dado = TipoDocumento::find($id);
+        return view('dados.edit',compact('dado'));
+    }
+
+    public function update(TipoDocumentoRequest $request, $id){
+        $tipos = TipoDocumento::find($id)->update($request->all());
+        return redirect('dados/todos-tipos-documentos');
+    }
 }

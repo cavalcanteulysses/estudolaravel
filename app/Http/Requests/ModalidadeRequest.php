@@ -3,10 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\Http\Requests;
-use App\Compra;
 
-class CompraRequest extends FormRequest
+class ModalidadeRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,13 +24,7 @@ class CompraRequest extends FormRequest
     public function rules()
     {
         return [
-            'numero' => 'required',
-            'data_protocolo' => 'required',
-            'objeto' => 'required|min:10',
-            'tipo_documento_id' => 'required',
-            'local_origem_id' => 'required',
-            'tipo_processo_id' => 'required',
-            'status_processo_id' => 'required'
+            'nome' => 'required|min:2'
         ];
     }
 }

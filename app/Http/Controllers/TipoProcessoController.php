@@ -28,4 +28,14 @@ class TipoProcessoController extends Controller
         TipoProcesso::find($id)->delete();
         return redirect('dados/todos-tipos-processos');
     }
+
+    public function edit($id){
+        $dado = TipoProcesso::find($id);
+        return view('dados.edit',compact('dado'));
+    }
+
+    public function update(TipoProcessoRequest $request, $id){
+        $tipos = TipoProcesso::find($id)->update($request->all());
+        return redirect('dados/todos-tipos-processos');
+    }
 }

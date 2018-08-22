@@ -14,24 +14,24 @@
         </ul>
         @endif
 
-        {!! Form::open(['url'=>'dados/'.Request::segment(2).'/store/']) !!}
+        {!! Form::open(['url'=>"dados/".Request::segment(2)."/$dado->id/update",'method'=>'put']) !!}
         <div class="form-row">
             <div class="form-group col">
                 {!! Form::label('nome', 'Nome:') !!}
-                {!! Form::text('nome', null, ['class'=>'form-control']) !!}
+                {!! Form::text('nome', $dado->nome, ['class'=>'form-control']) !!}
             </div>
 
             @if (Request::segment(2) == "todos-locais")
             <div class="form-group col">
                 {!! Form::label('sigla', 'Sigla:') !!}
-                {!! Form::text('sigla', null, ['class'=>'form-control']) !!}
+                {!! Form::text('sigla', $dado->sigla, ['class'=>'form-control']) !!}
             </div>
             @else
             @endif
         </div>
             <div class="form-group">
-                {!! Form::submit('Salvar dados', ['class'=>'btn btn-primary']) !!}
-            <a class="btn btn-danger" href="/dados/{{Request::segment(2)}}" title="Cancelar">Cancelar cadastro</a>
+                {!! Form::submit('Atualizar Dados', ['class'=>'btn btn-primary']) !!}
+            <a class="btn btn-danger" href="/dados/{{Request::segment(2)}}" title="Cancelar">Cancelar Atualização</a>
             </div>
 
         {!! Form::close() !!}
