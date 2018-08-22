@@ -1,4 +1,5 @@
-<p align="center"><img src="http://www.ifms.edu.br/marcaifms.png"></p>>
+<h1 align="center">Trabalho de Conclusão de Curso - eCompras</h1>
+<h6 align="center">Sistema para Gerenciamento dos Processos de Compras</h6>
 
 ## Sobre
 
