@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <div class="col-md-10">
-        <h1>Cadastro de Novo Dado</h1>
+    
+        <h2>Cadastro de Novo Dado</h2>
         <hr>
 
         @if ($errors->any())
@@ -36,6 +36,6 @@
 
         {!! Form::close() !!}
 
-    </div>
+   
 
 @endsection()

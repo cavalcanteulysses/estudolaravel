@@ -47,7 +47,7 @@
 
     <main class="container-fluid">
       <div class="row">
-          <div class="col-md-2">
+          <div class="col-md-3">
               <ul class="list-group">
                   <li class="list-group-item"><a href="/compras">Processos de Compras</a></li>    
                   <li class="list-group-item"><a href="#">Processos Licitatórios</a></li>    
@@ -58,7 +58,10 @@
           </div> 
         
 
-        @yield('content')
+          <div class="col-md-9">
+
+            @yield('content')
+            </div>
 
       </div>
     </main>

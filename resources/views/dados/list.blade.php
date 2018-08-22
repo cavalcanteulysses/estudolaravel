@@ -2,12 +2,12 @@
 
 @section('content')
 
-    <div class="col-md-10">
+    
         <div class="row justify-content-between">
             <div class="col-md-4">
-                <h1>Gerenciar Dados</h1>
+                <h2>Gerenciar Dados</h2>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <a class="btn btn-primary" href="/dados/{{Request::segment(2)}}/create" title="Criar Novo">Cadastrar Novo Processo</a>
             </div>
         </div>
@@ -37,5 +37,5 @@
             </tr>                
             @endforeach
         </table>
-    </div>
+    
 @endsection

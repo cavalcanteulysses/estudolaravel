@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-            <div class="col-md-10">
-                <h1>Página Inicial do Sistema</h1>
-            </div> 
+           
+                <h2>Página Inicial do Sistema</h2>
+         
 @endsection()

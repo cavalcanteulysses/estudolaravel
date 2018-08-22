@@ -1,12 +1,12 @@
 @extends('app')
 
 @section('content')
-    <div class="col-md-10">
+    
         <div class="row justify-content-between">
-            <div class="col-md-4">
-                <h1>Processos de Compras</h1>
+            <div class="col-md-5">
+                <h2>Processos de Compras</h2>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <a class="btn btn-primary" href="/compras/create" title="Criar Novo">Cadastrar Novo Processo</a>
             </div>
         </div>
@@ -24,10 +24,10 @@
               <tbody>
                 @foreach($compras as $compra)
                 <tr>
-                    <td>{{$compra->data_protocolo}}</td>
+                    <td>{{date( 'd/m/Y' , strtotime($compra->data_protocolo))}}</td>
                     <td>{{$compra->tipoDocumento->nome}} nº {{$compra->numero}}</td>
                     <td>{{$compra->localOrigem->sigla}}</td>
-                    <td>{{$compra->objeto}}</td>
+                    <td>{{str_limit($compra->objeto, $limit = 30, $end = '...')}}</td>
                     <td>{{$compra->statusProcesso->nome}}</td>
                     <td>
                         <a class="btn-sm btn-success" href="#" title="Editar"><i class="far fa-edit"></i></a>
@@ -38,5 +38,5 @@
                 @endforeach
               </tbody>
         </table>
-    </div>
+    
 @endsection

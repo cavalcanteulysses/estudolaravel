@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <div class="col-md-10">
-        <h1>Cadastro de Novo Processo</h1>
+    
+        <h2>Cadastro de Novo Processo</h2>
         <hr>
         @if ($errors->any())
         <ul class="alert alert-warning">
@@ -46,7 +46,7 @@
             </div>
             <div class="form-group">
                 {!! Form::label('objeto', 'Objeto:') !!}
-                {!! Form::textarea('objeto', null, ['class'=>'form-control']) !!}
+                {!! Form::textarea('objeto', null, ['class'=>'form-control','rows'=> 4]) !!}
             </div>
 
             <div class="form-group">
@@ -56,5 +56,5 @@
 
         {!! Form::close() !!}
 
-    </div>
+   
 @endsection()

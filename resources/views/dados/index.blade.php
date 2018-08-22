@@ -2,12 +2,24 @@
 
 @section('content')
 
-    <div class="col-md-10">
-        <h1>Todos os Dados Cadastrados</h1>
+    
+        <h2>Todos os Dados Cadastrados</h2>
         <hr>
-        <a class="btn btn-primary btn-lg" href="/dados/todos-locais">Gerenciar Locais</a>
-        <a class="btn btn-primary btn-lg" href="/dados/todos-status">Gerenciar Status dos Processos</a>
-        <a class="btn btn-primary btn-lg" href="/dados/todos-tipos-documentos">Gerenciar Tipos dos Documentos</a>
-        <a class="btn btn-primary btn-lg" href="/dados/todos-tipos-processos">Gerenciar Tipos dos Processos</a>
-    </div>
+        <div class="row">
+                <ul class="list-group">
+                        <li class="list-group-item">
+                        <a class="btn btn-primary btn-block" href="/dados/todos-locais">Gerenciar Locais</a>
+                        </li> 
+                        <li class="list-group-item">
+                        <a class="btn btn-primary btn-block" href="/dados/todos-status">Gerenciar Status dos Processos</a>
+                        </li>
+                        <li class="list-group-item">
+                        <a class="btn btn-primary btn-block" href="/dados/todos-tipos-documentos">Gerenciar Tipos dos Documentos</a>
+                        </li>
+                        <li class="list-group-item">
+                        <a class="btn btn-primary btn-block" href="/dados/todos-tipos-processos">Gerenciar Tipos dos Processos</a>
+                        </li>   
+                </ul> 
+        </div>
+    
 @endsection
