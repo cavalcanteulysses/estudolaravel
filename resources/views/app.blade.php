@@ -47,18 +47,17 @@
 
     <main class="container-fluid">
       <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-2">
               <ul class="list-group">
-                  <li class="list-group-item"><a href="/compras">Processos de Compras</a></li>    
-                  <li class="list-group-item"><a href="/licitacoes">Processos Licitatórios</a></li>    
-                  <li class="list-group-item"><a href="/dados">Gerenciar Dados</a></li>    
-                  <li class="list-group-item"><a href="#">Relatórios</a></li>    
-                  <li class="list-group-item"><a href="#">Busca Personalizada</a></li>    
+                  <li class="list-group-item"><a href="/compras">Compras</a></li>    
+                  <li class="list-group-item"><a href="/licitacoes">Licitatórios</a></li>    
+                  <li class="list-group-item"><a href="/dados">Dados</a></li>    
+                  <li class="list-group-item"><a href="#">Relatórios</a></li>                      
               </ul>   
           </div> 
         
 
-          <div class="col-md-9">
+          <div class="col-md-10">
 
             @yield('content')
             </div>
