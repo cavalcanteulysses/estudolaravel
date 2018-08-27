@@ -52,7 +52,7 @@
                   <li class="list-group-item"><a href="/compras">Compras</a></li>    
                   <li class="list-group-item"><a href="/licitacoes">Licitatórios</a></li>    
                   <li class="list-group-item"><a href="/dados">Dados</a></li>    
-                  <li class="list-group-item"><a href="#">Relatórios</a></li>                      
+                  <!--<li class="list-group-item"><a href="#">Relatórios</a></li>-->
               </ul>   
           </div> 
         
