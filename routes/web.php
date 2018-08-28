@@ -67,3 +67,7 @@ Route::post('dados/todas-modalidades/store','ModalidadeController@store');
 Route::get('dados/todas-modalidades/{id}/destroy','ModalidadeController@destroy');
 Route::get('dados/todas-modalidades/{id}/edit','ModalidadeController@edit');
 Route::put('dados/todas-modalidades/{id}/update','ModalidadeController@update');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
